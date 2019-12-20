@@ -11,11 +11,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>uva-onlinejudge</artifactId>
 	<modules>
-		<module>string-processing</module>
-		<module>mathmatics</module>
-		<module>introduction</module>
-		<module>data-structure</module>
-		<module>algorithm</module>
-		<module>recent</module>
+		<module>uva-string-processing</module>
+		<module>uva-mathmatics</module>
+		<module>uva-introduction</module>
+		<module>uva-data-structure</module>
+		<module>uva-algorithm</module>
+		<module>uva-recent</module>
 	</modules>
 </project>

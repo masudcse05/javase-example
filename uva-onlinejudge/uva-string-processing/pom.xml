@@ -5,6 +5,5 @@
     <artifactId>uva-onlinejudge</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.mhaque.uva</groupId>
-  <artifactId>recent</artifactId>
+  <artifactId>uva-string-processing</artifactId>
 </project>
