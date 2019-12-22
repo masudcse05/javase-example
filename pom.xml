@@ -25,6 +25,7 @@
 		<module>design-pattern</module>
 		<module>algorithm</module>
 		<module>activemq</module>
+		<module>data-structure</module>
 	</modules>
 
 	<dependencies>
