@@ -29,6 +29,9 @@
 		<module>elasticsearch</module>
 		<module>xml-jaxb</module>
 		<module>java9-multimodule</module>
+		<module>basic</module>
+		<module>advance</module>
+		<module>reporting</module>
 	</modules>
 
 	<dependencies>
