@@ -27,6 +27,8 @@
 		<module>activemq</module>
 		<module>data-structure</module>
 		<module>elasticsearch</module>
+		<module>xml-jaxb</module>
+		<module>java9-multimodule</module>
 	</modules>
 
 	<dependencies>
