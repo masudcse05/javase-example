@@ -6,7 +6,7 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 /**
- * Created by raoul-gabrielurma on 14/01/2014.
+ * Created by Masud.
  */
 public class Laziness {
 
