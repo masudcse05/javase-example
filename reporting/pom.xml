@@ -11,5 +11,6 @@
   <modules>
   	<module>fop</module>
   	<module>poi</module>
+  	<module>barcode4j</module>
   </modules>
 </project>
