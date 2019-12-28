@@ -1,4 +1,4 @@
-package com.mhaque.bridge.logger;
+package com.mhaque.designpattern.bridge.logger;
 
 // Logger has two implementations: info and warning
 @FunctionalInterface
