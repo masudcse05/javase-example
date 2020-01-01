@@ -2,13 +2,12 @@ package com.mhaque.algorithm.recursion;
 
 public class Addition {
 	
-	public static void main(String[] args) {
-
-        int sum = add(10);
-        System.out.println(sum);
-	}
-	
-	static int add(int n) {
+	/**
+	 * Add number 1 to n using recursion.
+	 * @param n
+	 * @return
+	 */
+	public static int add(int n) {
 		if(n==1) {
 			return 1;
 		}
