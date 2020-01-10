@@ -33,6 +33,9 @@
 		<module>advance</module>
 		<module>reporting</module>
 		<module>machine-learning</module>
+		<module>ad-integ</module>
+		<module>json-jackson</module>
+		<module>apache-spark</module>
 	</modules>
 
 	<dependencies>
