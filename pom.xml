@@ -36,6 +36,7 @@
 		<module>ad-integ</module>
 		<module>json-jackson</module>
 		<module>apache-spark</module>
+		<module>leet-code</module>
 	</modules>
 
 	<dependencies>

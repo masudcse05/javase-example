@@ -90,10 +90,12 @@ public class p1099 {
             dp = new byte[Math.min(x, y) + 1][1 << n];
             for (int i = 0; i < dp.length; i++)
                 Arrays.fill(dp[i], (byte) -1);
-            if (go(Math.min(x, y), 0) == 1)
+            if (go(Math.min(x, y), 0) == 1) {
                 System.out.println("Case " + (cc++) + ": " + "Yes");
-            else
+            }
+            else {
                 System.out.println("Case " + (cc++) + ": " + "No");
+            }
         }
     }
  

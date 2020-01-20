@@ -9,12 +9,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-import javax.xml.transform.Result;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.sax.SAXResult;
-import javax.xml.transform.stream.StreamSource;
+//import javax.xml.transform.Result;
+//import javax.xml.transform.Source;
+//import javax.xml.transform.Transformer;
+//import javax.xml.transform.TransformerFactory;
+//import javax.xml.transform.sax.SAXResult;
+//import javax.xml.transform.stream.StreamSource;
 
 import org.apache.fop.apps.FOPException;
 import org.apache.fop.apps.FOUserAgent;
@@ -56,29 +56,29 @@ public class ExampleFO2PDF {
             Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, out);
 
             // Setup JAXP using identity transformer
-            TransformerFactory factory = TransformerFactory.newInstance();
-            Transformer transformer = factory.newTransformer(); // identity transformer
-
-            // Setup input stream
-            Source src = new StreamSource(fo);
-
-            // Resulting SAX events (the generated FO) must be piped through to FOP
-            Result res = new SAXResult(fop.getDefaultHandler());
-
-            // Start XSLT transformation and FOP processing
-            transformer.transform(src, res);
-
-            // Result processing
-            FormattingResults foResults = fop.getResults();
-            java.util.List pageSequences = foResults.getPageSequences();
-            for (Object pageSequence : pageSequences) {
-                PageSequenceResults pageSequenceResults = (PageSequenceResults) pageSequence;
-                System.out.println("PageSequence "
-                        + (String.valueOf(pageSequenceResults.getID()).length() > 0
-                        ? pageSequenceResults.getID() : "<no id>")
-                        + " generated " + pageSequenceResults.getPageCount() + " pages.");
-            }
-            System.out.println("Generated " + foResults.getPageCount() + " pages in total.");
+//            TransformerFactory factory = TransformerFactory.newInstance();
+//            Transformer transformer = factory.newTransformer(); // identity transformer
+//
+//            // Setup input stream
+//            Source src = new StreamSource(fo);
+//
+//            // Resulting SAX events (the generated FO) must be piped through to FOP
+//            Result res = new SAXResult(fop.getDefaultHandler());
+//
+//            // Start XSLT transformation and FOP processing
+//            transformer.transform(src, res);
+//
+//            // Result processing
+//            FormattingResults foResults = fop.getResults();
+//            java.util.List pageSequences = foResults.getPageSequences();
+//            for (Object pageSequence : pageSequences) {
+//                PageSequenceResults pageSequenceResults = (PageSequenceResults) pageSequence;
+//                System.out.println("PageSequence "
+//                        + (String.valueOf(pageSequenceResults.getID()).length() > 0
+//                        ? pageSequenceResults.getID() : "<no id>")
+//                        + " generated " + pageSequenceResults.getPageCount() + " pages.");
+//            }
+//            System.out.println("Generated " + foResults.getPageCount() + " pages in total.");
 
         } catch (Exception e) {
             e.printStackTrace(System.err);

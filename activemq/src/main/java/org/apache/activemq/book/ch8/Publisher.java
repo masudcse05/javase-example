@@ -12,9 +12,9 @@ import javax.jms.Message;
 import javax.jms.MessageProducer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
-import javax.xml.stream.XMLOutputFactory; 
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamWriter;
+//import javax.xml.stream.XMLOutputFactory; 
+//import javax.xml.stream.XMLStreamException;
+//import javax.xml.stream.XMLStreamWriter;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQTextMessage;
@@ -45,77 +45,77 @@ public class Publisher {
             connection.close();
         }
     }
-    
-    public static void main(String[] args) throws JMSException, XMLStreamException {
-    	Publisher publisher = new Publisher();
-        while (total < 1000) {
-            for (int i = 0; i < count; i++) {
-                publisher.sendMessage(args);
-            }
-            total += count;
-            System.out.println("Published '" + count + "' of '" + total + "' price messages");
-            try {
-              Thread.sleep(1000);
-            } catch (InterruptedException x) {
-            }
-          }
-        publisher.close();
-    }
+//    
+//    public static void main(String[] args) throws JMSException, XMLStreamException {
+//    	Publisher publisher = new Publisher();
+//        while (total < 1000) {
+//            for (int i = 0; i < count; i++) {
+//                publisher.sendMessage(args);
+//            }
+//            total += count;
+//            System.out.println("Published '" + count + "' of '" + total + "' price messages");
+//            try {
+//              Thread.sleep(1000);
+//            } catch (InterruptedException x) {
+//            }
+//          }
+//        publisher.close();
+//    }
+//
+//    protected void sendMessage(String[] stocks) throws JMSException, XMLStreamException {
+//        int idx = 0;
+//        while (true) {
+//            idx = (int)Math.round(stocks.length * Math.random());
+//            if (idx < stocks.length) {
+//                break;
+//            }
+//        }
+//        String stock = stocks[idx];
+//        Destination destination = session.createTopic("STOCKS." + stock);
+//        Message message = createStockMessage(stock, session);
+//        System.out.println("Sending: " + ((ActiveMQTextMessage)message).getText() + " on destination: " + destination);
+//        producer.send(destination, message);
+//    }
 
-    protected void sendMessage(String[] stocks) throws JMSException, XMLStreamException {
-        int idx = 0;
-        while (true) {
-            idx = (int)Math.round(stocks.length * Math.random());
-            if (idx < stocks.length) {
-                break;
-            }
-        }
-        String stock = stocks[idx];
-        Destination destination = session.createTopic("STOCKS." + stock);
-        Message message = createStockMessage(stock, session);
-        System.out.println("Sending: " + ((ActiveMQTextMessage)message).getText() + " on destination: " + destination);
-        producer.send(destination, message);
-    }
-
-    protected Message createStockMessage(String stock, Session session) throws JMSException, XMLStreamException {
-        Double value = LAST_PRICES.get(stock);
-        if (value == null) {
-            value = new Double(Math.random() * 100);
-        }
-
-        // lets mutate the value by some percentage
-        double oldPrice = value.doubleValue();
-        value = new Double(mutatePrice(oldPrice));
-        LAST_PRICES.put(stock, value);
-        double price = value.doubleValue();
-
-        double offer = price * 1.001;
-
-        boolean up = (price > oldPrice);
-        
-        StringWriter res = new StringWriter();
-        XMLStreamWriter writer = XMLOutputFactory.newInstance().createXMLStreamWriter(res);
-        writer.writeStartDocument();
-        writer.writeStartElement("stock");
-        writer.writeAttribute("name", stock);
-        	writer.writeStartElement("price");
-        	writer.writeCharacters(String.valueOf(price));
-        	writer.writeEndElement();
-        	
-        	writer.writeStartElement("offer");
-        	writer.writeCharacters(String.valueOf(offer));
-        	writer.writeEndElement();
-        	
-        	writer.writeStartElement("up");
-        	writer.writeCharacters(String.valueOf(up));
-        	writer.writeEndElement();
-        writer.writeEndElement();
-        writer.writeEndDocument();
-        
-		TextMessage message = session.createTextMessage();
-		message.setText(res.toString());
-		return message;
-    }
+//    protected Message createStockMessage(String stock, Session session) throws JMSException, XMLStreamException {
+//        Double value = LAST_PRICES.get(stock);
+//        if (value == null) {
+//            value = new Double(Math.random() * 100);
+//        }
+//
+//        // lets mutate the value by some percentage
+//        double oldPrice = value.doubleValue();
+//        value = new Double(mutatePrice(oldPrice));
+//        LAST_PRICES.put(stock, value);
+//        double price = value.doubleValue();
+//
+//        double offer = price * 1.001;
+//
+//        boolean up = (price > oldPrice);
+//        
+//        StringWriter res = new StringWriter();
+//        XMLStreamWriter writer = XMLOutputFactory.newInstance().createXMLStreamWriter(res);
+//        writer.writeStartDocument();
+//        writer.writeStartElement("stock");
+//        writer.writeAttribute("name", stock);
+//        	writer.writeStartElement("price");
+//        	writer.writeCharacters(String.valueOf(price));
+//        	writer.writeEndElement();
+//        	
+//        	writer.writeStartElement("offer");
+//        	writer.writeCharacters(String.valueOf(offer));
+//        	writer.writeEndElement();
+//        	
+//        	writer.writeStartElement("up");
+//        	writer.writeCharacters(String.valueOf(up));
+//        	writer.writeEndElement();
+//        writer.writeEndElement();
+//        writer.writeEndDocument();
+//        
+//		TextMessage message = session.createTextMessage();
+//		message.setText(res.toString());
+//		return message;
+//    }
 
     protected double mutatePrice(double price) {
         double percentChange = (2 * Math.random() * MAX_DELTA_PERCENT) - MAX_DELTA_PERCENT;
