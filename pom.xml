@@ -36,7 +36,11 @@
 		<module>ad-integ</module>
 		<module>json-jackson</module>
 		<module>apache-spark</module>
+<<<<<<< HEAD
 		<module>leet-code</module>
+=======
+		<module>hacker-rank</module>
+>>>>>>> 44ba6f004928db8f41f172dd02d7f33a2de1a3be
 	</modules>
 
 	<dependencies>
