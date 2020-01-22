@@ -1,7 +1,7 @@
 package com.mhaque.hackerrank.strings;
 
 public class CaesarCipher {
-	static String caesarCipher(String s, int k) {
+	public static String caesarCipher(String s, int k) {
 		char[] output = new char[s.length()];
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
@@ -11,20 +11,16 @@ public class CaesarCipher {
 	}
 
 	private static char getCeaserCipher(char c, int k) {
-
 		int offset = k%26;
 		if ((c>=65 && c<=90)) {
-			int output = getOuput(c, offset, 90);
-			return (char)output;
+			return (char)getOuput(c, offset, 90);
 		}
 		else if(c>=97 && c<=122) {
-			int output = getOuput(c, offset, 122);
-			return (char)output;
+			return (char)getOuput(c, offset, 122);
 		}
 		else {
 		  return c;
 		}
-
 	}
 	
 	private static int getOuput(char c, int offset, int maxValue) {
