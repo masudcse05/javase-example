@@ -4,18 +4,6 @@
  */
 package primenumber;
 
-/**
- * @author Juan Sebastian Beltran Rojas
- * @mail jsbeltran.valhalla@gmail.com
- * @veredict Accepted
- * @problemId 10140
- * @problemName Prime Distance
- * @judge http://uva.onlinejudge.org/
- * @category math
- * @level easy
- * @date 07/06/2012
- *
- */
 import java.io.*;
 import java.util.*;
 import static java.lang.Math.*;
