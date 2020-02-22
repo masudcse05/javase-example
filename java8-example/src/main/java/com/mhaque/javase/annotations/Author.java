@@ -7,6 +7,3 @@ public @interface Author {
 	String name(); 
 }
 
-@interface Authors {
-    Author[] value();
-}
