@@ -1,0 +1,17 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.mhaque.javase</groupId>
+    <artifactId>javase-example</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>com.mhaque.email</groupId>
+  <artifactId>java-email</artifactId>
+  <dependencies>
+	  <dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.5.0-b01</version>
+	   </dependency>
+   </dependencies>
+</project>

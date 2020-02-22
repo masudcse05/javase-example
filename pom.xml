@@ -39,6 +39,7 @@
 		<module>leet-code</module>
 		<module>hacker-rank</module>
 		<module>smooks</module>
+		<module>java-email</module>
 	</modules>
 
 	<dependencies>
