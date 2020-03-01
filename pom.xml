@@ -40,6 +40,7 @@
 		<module>hacker-rank</module>
 		<module>smooks</module>
 		<module>java-email</module>
+		<module>cucumber</module>
 	</modules>
 
 	<dependencies>
