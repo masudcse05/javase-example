@@ -34,11 +34,11 @@ public class Functions {
   }
 
   public static Future<Integer> ff(int x) {
-    return new CompletableFuture<Integer>().completeAsync(() -> Integer.valueOf(x * 2));
+    return null;// new CompletableFuture<Integer>()).completeAsync(() -> Integer.valueOf(x * 2));
   }
 
   public static Future<Integer> gf(int x) {
-    return new CompletableFuture<Integer>().completeAsync(() -> Integer.valueOf(x + 1));
+    return null;//new CompletableFuture<Integer>().completeAsync(() -> Integer.valueOf(x + 1));
   }
 
   private static void sequential(int x) {

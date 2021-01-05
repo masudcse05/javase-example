@@ -40,9 +40,7 @@ public class ObjectToJsonTest {
 
 	@Test
 	public void testToObject() throws JsonParseException, JsonMappingException, IOException {
-		String json = """
-				{"name":"Masudul Haque","email":"masud.cse.05@gmail.com","phone":"+318989545","dateOfBirth":1578586558869,"address":{"streetName":"Vogelwikke 13","city":"Hilversum","postalCode":"4545RR","state":"Utrecht"}}
-				""";
+		String json = "Masudul Haque";
 		Customer customer = ObjectToJson.toObject(json);
 		assertEquals("Masudul Haque", customer.getName());
 	}

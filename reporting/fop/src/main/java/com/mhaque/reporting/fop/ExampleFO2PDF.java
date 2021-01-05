@@ -39,7 +39,7 @@ public class ExampleFO2PDF {
      * @throws IOException In case of an I/O problem
      * @throws FOPException In case of a FOP problem
      */
-    public void convertFO2PDF(File fo, File pdf) throws IOException, FOPException {
+    public void convertFO2PDF(File fo, File pdf) throws IOException {
 
         OutputStream out = null;
 
@@ -53,7 +53,7 @@ public class ExampleFO2PDF {
             out = new BufferedOutputStream(out);
 
             // Construct fop with desired output format
-            Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, out);
+            //Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, out);
 
             // Setup JAXP using identity transformer
 //            TransformerFactory factory = TransformerFactory.newInstance();
