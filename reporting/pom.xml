@@ -12,5 +12,6 @@
   	<module>fop</module>
   	<module>poi</module>
   	<module>barcode4j</module>
+  	<module>jasper-report</module>
   </modules>
 </project>
