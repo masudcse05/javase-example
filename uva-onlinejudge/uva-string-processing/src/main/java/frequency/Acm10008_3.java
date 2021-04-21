@@ -5,15 +5,6 @@
 package frequency;
 
 /**
- * @author Juan Sebastian Beltran Rojas
- * @mail jsbeltran.valhalla@gmail.com
- * @veredict Accepted
- * @problemId 10008
- * @problemName What's Cryptanalysis?
- * @judge http://uva.onlinejudge.org/
- * @category characters
- * @level easy
- * @date 2008
  *
  */
 import java.io.*;
