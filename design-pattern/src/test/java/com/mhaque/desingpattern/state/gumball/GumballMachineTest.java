@@ -1,8 +1,13 @@
 package com.mhaque.desingpattern.state.gumball;
 
-public class GumballMachineTestDrive {
+import static org.junit.Assert.*;
 
-	public static void main(String[] args) {
+import org.junit.Test;
+
+public class GumballMachineTest {
+
+	@Test
+	public void test() {
 		GumballMachine gumballMachine = new GumballMachine(5);
 
 		System.out.println(gumballMachine);
@@ -35,5 +40,7 @@ public class GumballMachineTestDrive {
 		gumballMachine.turnCrank();
 
 		System.out.println(gumballMachine);
+
 	}
+
 }
